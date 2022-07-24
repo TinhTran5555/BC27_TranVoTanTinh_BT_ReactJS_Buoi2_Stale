@@ -7,7 +7,6 @@ export default class SelectProuct extends Component {
     super();
 
     this.state = {
-      // Lưu trữ đường dẫn hình ảnh của kính
       imgUrl: "",
       names: "",
       desce: ""
@@ -16,7 +15,6 @@ export default class SelectProuct extends Component {
   }
  
   changeGlass = (number, name, desc) => {
-    // Dùng cái màu nhận được để thay đổi giá trị state imgUrl
     const imgUrl = `/products/v${number}.png`;
     const names = `${name}`;
     const desce = `${desc}`;
@@ -30,23 +28,22 @@ export default class SelectProuct extends Component {
     return (
       <div className="container" id="backGround">
         <div
-          className="header"
-          style={{ textAlign: "center", background: "black", opacity: "0.5" }}
+          className="text-center text-white bg-dark bg-opacity-75"
+         
         >
-          <h2 style={{ color: "white" }}>TRY GLASSES APP ONLINE</h2>
+          <h2>TRY GLASSES APP ONLINE</h2>
         </div>
         <div className="row">
           <div id="top">
             <div className="top-item">
               <img src="./img/model.jpg" alt="" />
               <div
-                className="top-content"
-                style={{ textAlign: "left", background: "#ffc107" }}
-              >
-                <h5 style={{ fontSize: "20px", color: "#03a9f4" }}>
+                className="top-content text-start bg-gradient bg-warning" 
+              >          
+                <h5 className="text-primary">
                   {this.state.names}
                 </h5>
-                <p style={{ fontSize: "14px", color: "white" }}>
+                <p className="text-white fs-6">
                 {this.state.desce}
                 </p>
               </div>
@@ -60,7 +57,7 @@ export default class SelectProuct extends Component {
             </div>
           </div>
           <div className="bottom">
-            <div className="container" style={{ background: "white" }}>
+            <div className="container bg-white">
               <div
                 className="row"
                 id="bot-item"
